@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <script src="https://telegram.org/js/telegram-web-app.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script>
+            var app = angular.module("tgMiniApp", []).controller("tgMiniAppController", function($scope){
+                $scope.foods = [
+                    {"name": "tomato", "val": 5},
+                    {"name": "carrot", "val": 5},
+                    {"name": "cabbage", "val": 5},
+                    {"name": "potato", "val": 5}
+                ]
+            })
+        </script>
+    </head>
+    <body>
+        <div ng-app="tgMiniApp" ng-controller="tgMiniAppController">
+            <div ng-repeat="food in foods">
+                <div>{{ food.name }}: {{ food.val }}</div>
+                <input type="range" min="1" max="10" ng-model="food.val">
+            </div>
+        </div>
+    </body>
+</html>
