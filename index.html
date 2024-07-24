@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html class="bg-slate-800">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="static/css/style.css">
+        <script src="https://cdn.tailwindcss.com"></script>
         <script src="https://telegram.org/js/telegram-web-app.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
         <script>
             var app = angular.module("tgMiniApp", []).controller("tgMiniAppController", function($scope){
-                $scope.foods = [
-                    {"name": "tomato", "val": 5},
-                    {"name": "carrot", "val": 5},
-                    {"name": "cabbage", "val": 5},
-                    {"name": "potato", "val": 5}
-                ]
+                
             })
         </script>
     </head>
     <body>
         <div ng-app="tgMiniApp" ng-controller="tgMiniAppController">
-            <div ng-repeat="food in foods">
-                <div>{{ food.name }}: {{ food.val }}</div>
-                <input type="range" min="1" max="10" ng-model="food.val">
+            <div class="text-slate-100 font-mono grid grid-cols-4 gap-2 sm:gap-4 text-center text-[0.7rem] sm:text-2xl p-4 h-24 md:h-48 lg:h-64">
+                <div class="mainMenuButton bg-slate-700 flex flex-col p-1">
+                    <img src="" alt="" class="mainMenuButtonIcon">
+                    <div class="placeholderIcon"></div>
+                    <h3 class="mainMenuButtonLabel">Генерации</h3>
+                </div>
+                <div class="mainMenuButton bg-slate-700 flex flex-col p-1">
+                    <img src="" alt="" class="mainMenuButtonIcon">
+                    <div class="placeholderIcon"></div>
+                    <h3 class="mainMenuButtonLabel">Настройки</h3>
+                </div>
+                <div class="mainMenuButton bg-slate-700 flex flex-col p-1">
+                    <img src="" alt="" class="mainMenuButtonIcon">
+                    <div class="placeholderIcon"></div>
+                    <h3 class="mainMenuButtonLabel">Токены</h3>
+                </div>
+                <div class="mainMenuButton bg-slate-700 flex flex-col p-1">
+                    <img src="" alt="" class="mainMenuButtonIcon">
+                    <div class="placeholderIcon"></div>
+                    <h3 class="mainMenuButtonLabel">Статистика</h3>
+                </div>
             </div>
         </div>
     </body>
