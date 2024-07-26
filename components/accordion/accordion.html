@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="components/accordion/accordion.css">
+<div class="accordion" ng-click="$ctrl.changeAccordion()">
+    <a href="">
+        <div class="accordionHeader text-slate-200 border-b-2 px-2 py-2 align-middle flex flex-row justify-between hover:bg-slate-700">
+            <h3>{{ $ctrl.content.headerText }}</h3>
+            <span ng-show="$ctrl.content.open" class="fa-solid fa-chevron-up"></span>
+            <span ng-show="!$ctrl.content.open" class="fa-solid fa-chevron-down"></span>
+        </div>
+    </a>
+</div>
+<div class="accordionContent my-2 bg-slate-900 text-slate-100" ng-show="$ctrl.content.open">
+    <ng-include src="$ctrl.content.contentHTML"></ng-include>
+</div>
