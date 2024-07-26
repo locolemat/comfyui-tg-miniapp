@@ -8,7 +8,6 @@ app.config(function($routeProvider){
     })
 })
 app.controller("accordionCtrl", function($scope){
-    
     $scope.accordions = [
         {
             headerText: "Статистика",
@@ -16,7 +15,7 @@ app.controller("accordionCtrl", function($scope){
             open: true
         },
         {
-            headerText: "История просмотров",
+            headerText: "История генераций",
             contentHTML: "components/accordion/content/gen_history.html",
             open: false
         }
