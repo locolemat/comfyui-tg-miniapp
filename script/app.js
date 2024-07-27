@@ -53,6 +53,33 @@ app.controller("accountCtrl", function($scope){
     $scope.replaceDefaultNegPrompt = false;
 
     $scope.defaultNegPromptText = "text, watermark"
+
+    $scope.statRecords = [
+        {
+            "label": "Всего генераций: ",
+            "value": 0
+        },
+        {
+            "label": "Генерации картинок: ",
+            "value": 0
+        },
+        {
+            "label": "Генерации видео: ",
+            "value": 0
+        },
+        {
+            "label": "Самое длинное видео: ",
+            "value": 0
+        },
+        {
+            "label": "Самый частый размер: ",
+            "value": 0
+        },
+        {
+            "label": "Любимый тип генерации: ",
+            "value": "Картинка в картинку"
+        },
+    ]
 })
 
 app.controller("generateCtrl", function($scope){
