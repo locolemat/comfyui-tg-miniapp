@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angularjs-tooltips": "^1.0.5"
+    "angularjs-tooltips": "^1.0.5",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
   }
 }
