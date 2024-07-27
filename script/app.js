@@ -36,6 +36,19 @@ app.controller("accountCtrl", function($scope){
 
     $scope.selectedModel = $scope.modelOption[0]
     $scope.selectedVideoModel = $scope.videoOption[0]
+
+    $scope.videoLength = 3;
+    $scope.videoFPS = 14;
+    $scope.decrementValue = function(val, min){
+        if($scope[val] > min){
+            $scope[val]--;
+        }   
+    }
+    $scope.incrementValue = function(val, max){
+        if($scope[val] < max){
+            $scope[val]++;
+        }   
+    }
 })
 
 app.controller("generateCtrl", function($scope){
