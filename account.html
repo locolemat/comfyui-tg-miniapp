@@ -44,8 +44,25 @@
                     <p id="helper-text-explanation" class="mt-2 text-sm text-gray-500 dark:text-gray-400">От 6 до 30 кадров</p>
                 </form>
             </div>
-            
 
+            <label class="mt-2 inline-flex items-end cursor-pointer">
+                <input type="checkbox" value="" ng-model="useDefaultNegPrompt" class="sr-only peer" checked>
+                <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Использовать негативный промт по умолчанию</span>
+            </label>
+            <div class="defaultNegPromptGroup">
+                <div ng-show="useDefaultNegPrompt" class="inline-flex items-end">
+                    <label class="mt-2 inline-flex items-center cursor-pointer">
+                        <input type="checkbox" value="" ng-model="replaceDefaultNegPrompt" class="sr-only peer disabled:opacity-30" ng-disabled="!useDefaultNegPrompt">
+                        <div class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    </label>
+                        <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Заменять негативный промт</span>
+                        <span class="fa-solid fa-circle-question ml-2"></span>
+                </div>
+                
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Негативный промт по умолчанию</label>
+                <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:opacity-30" textplaceholder="Напишите промт..." ng-disabled="!useDefaultNegPrompt" ng-model="defaultNegPromptText"></textarea>
+            </div>
         </div>
     </div>
 </body>

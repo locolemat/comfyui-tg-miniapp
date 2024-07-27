@@ -49,6 +49,10 @@ app.controller("accountCtrl", function($scope){
             $scope[val]++;
         }   
     }
+    $scope.useDefaultNegPrompt = true;
+    $scope.replaceDefaultNegPrompt = false;
+
+    $scope.defaultNegPromptText = "text, watermark"
 })
 
 app.controller("generateCtrl", function($scope){
