@@ -3,9 +3,9 @@ var app = angular.module("tgMiniApp", ["ngRoute", "ngAnimate"]).controller("tgMi
 })
 
 app.config(function($routeProvider){
-    $routeProvider.when("/stats", {
-        templateUrl: "./stats.html",
-        controller: "accordionCtrl"
+    $routeProvider.when("/account", {
+        templateUrl: "./account.html",
+        controller: "accountCtrl"
     })
     $routeProvider.when("/generate", {
         templateUrl: "./generate.html",
@@ -13,19 +13,29 @@ app.config(function($routeProvider){
     })
 })
 
-app.controller("accordionCtrl", function($scope){
-    $scope.accordions = [
-        {
-            headerText: "Статистика",
-            contentHTML: "components/accordion/content/stats.html",
-            open: true
-        },
-        {
-            headerText: "История генераций",
-            contentHTML: "components/accordion/content/gen_history.html",
-            open: false
-        }
+app.controller("accountCtrl", function($scope){
+    // $scope.accordions = [
+    //     {
+    //         headerText: "Статистика",
+    //         contentHTML: "components/accordion/content/stats.html",
+    //         open: true
+    //     },
+    //     {
+    //         headerText: "История генераций",
+    //         contentHTML: "components/accordion/content/gen_history.html",
+    //         open: false
+    //     }
+    // ]
+    $scope.modelOption = [
+        'model1', 'model2', 'model3', 'model4'
     ]
+
+    $scope.videoOption = [
+        'video_model1', 'video_model2', 'video_model3'
+    ]
+
+    $scope.selectedModel = $scope.modelOption[0]
+    $scope.selectedVideoModel = $scope.videoOption[0]
 })
 
 app.controller("generateCtrl", function($scope){
