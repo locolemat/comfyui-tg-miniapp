@@ -11,6 +11,9 @@ app.config(function($routeProvider){
         templateUrl: "./generate.html",
         controller: "generateCtrl"
     })
+    $routeProvider.when("/generate/zalupa", {
+        templateUrl: "./account.html"
+    })
 })
 
 app.controller("accountCtrl", function($scope){
@@ -80,6 +83,33 @@ app.controller("accountCtrl", function($scope){
             "value": "Картинка в картинку"
         },
     ]
+
+    $scope.historyRecord = [
+        {
+            prompt: "жопажопа",
+            date: "00:00:00 01/01/1970",
+            price: 0,
+            genType: "Картинка в картинку"
+        },
+        {
+            prompt: "жопажопа",
+            date: "00:00:00 01/01/1970",
+            price: 0,
+            genType: "Картинка в картинку"
+        },
+        {
+            prompt: "жопажопа",
+            date: "00:00:00 01/01/1970",
+            price: 0,
+            genType: "Картинка в картинку"
+        },
+        {
+            prompt: "жопажопа",
+            date: "00:00:00 01/01/1970",
+            price: 0,
+            genType: "Картинка в картинку"
+        },
+    ]
 })
 
 app.controller("generateCtrl", function($scope){
@@ -87,22 +117,26 @@ app.controller("generateCtrl", function($scope){
         {
             imageURL : "",
             header: "Картинка из текста",
-            desc: "Офигенная генерация"
+            desc: "Хорошая генерация",
+            detailsURL: "zalupa"
         },
         {
             imageURL : "",
             header: "Текст в видео",
-            desc: "Охуенная генерация"
+            desc: "Отличная генерация",
+            detailsURL: "zalupa"
         },
         {
             imageURL : "",
             header: "Картинка в видео",
-            desc: "Опиздохуительная генерация"
+            desc: "Замечательная генерация",
+            detailsURL: "zalupa"
         },
         {
             imageURL : "",
             header: "Картинка в картинку",
-            desc: "Ебанутейшая генерация"
+            desc: "Лютейшая генерация",
+            detailsURL: "zalupa"
         }
     ]
 })
