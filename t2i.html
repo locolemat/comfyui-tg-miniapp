@@ -1,0 +1,24 @@
+<body>
+    <div class="mx-4 grid-cols-1">
+        <div class="rounded-md bg-slate-900 w-full text-slate-100 grid-cols-1 p-4">
+            <h1 class="text-2xl text-slate-100 uppercase">Картинка из текста</h1>
+            <hr>
+            <label for="message" class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Промт</label>
+            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:opacity-30" textplaceholder="Напишите промт..."></textarea>
+
+            <label for="message" class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Негативный промт</label>
+            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 disabled:opacity-30" textplaceholder="Напишите промт..."></textarea>
+
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label for="default-range" class="block my-2 text-sm font-medium text-gray-900 dark:text-white">CFG</label>
+                    <input id="default-range" type="range" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                </div>
+                <div>
+                    <label for="default-range" class="block my-2 text-sm font-medium text-gray-900 dark:text-white">CFG</label>
+                    <input id="default-range" type="range" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

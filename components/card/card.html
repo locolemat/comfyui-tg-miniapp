@@ -1,6 +1,8 @@
-<div class="rounded-md bg-slate-900 size-96 sm:size-80 md:size-64 xl:size-72 p-2 hover:bg-slate-700">
-    <img src="$ctrl.content.imageURL" alt="">
-    <div class="h-5/6 md:h-4/6 w-full bg-red-600"></div>
-    <h2 class="text-slate-100 text-center text-2xl">{{ $ctrl.content.header }}</h2>
-    <p class="text-slate-300 text-center text-sm">{{ $ctrl.content.desc }}</p>
-</div>
+<a href="#!generate/{{ $ctrl.content.detailsURL }}">
+    <div class="rounded-md bg-slate-900 size-96 sm:size-80 md:size-64 xl:size-72 p-2 hover:bg-slate-700">
+        <img src="$ctrl.content.imageURL" alt="">
+        <div class="h-5/6 md:h-4/6 w-full bg-red-600"></div>
+        <h2 class="text-slate-100 text-center text-2xl">{{ $ctrl.content.header }}</h2>
+        <p class="text-slate-300 text-center text-sm">{{ $ctrl.content.desc }}</p>
+    </div>
+</a>

@@ -1,5 +1,5 @@
 var app = angular.module("tgMiniApp", ["ngRoute", "ngAnimate"]).controller("tgMiniAppController", function($scope){
-    
+    $scope.useDefaultNegPrompt = true;
 })
 
 app.config(function($routeProvider){
@@ -11,8 +11,8 @@ app.config(function($routeProvider){
         templateUrl: "./generate.html",
         controller: "generateCtrl"
     })
-    $routeProvider.when("/generate/zalupa", {
-        templateUrl: "./account.html"
+    $routeProvider.when("/generate/t2i", {
+        templateUrl: "./t2i.html"
     })
 })
 
@@ -52,7 +52,7 @@ app.controller("accountCtrl", function($scope){
             $scope[val]++;
         }   
     }
-    $scope.useDefaultNegPrompt = true;
+    
     $scope.replaceDefaultNegPrompt = false;
 
     $scope.defaultNegPromptText = "text, watermark"
@@ -118,25 +118,25 @@ app.controller("generateCtrl", function($scope){
             imageURL : "",
             header: "Картинка из текста",
             desc: "Хорошая генерация",
-            detailsURL: "zalupa"
+            detailsURL: "t2i"
         },
         {
             imageURL : "",
             header: "Текст в видео",
             desc: "Отличная генерация",
-            detailsURL: "zalupa"
+            detailsURL: "t2v"
         },
         {
             imageURL : "",
             header: "Картинка в видео",
             desc: "Замечательная генерация",
-            detailsURL: "zalupa"
+            detailsURL: "i2v"
         },
         {
             imageURL : "",
             header: "Картинка в картинку",
             desc: "Лютейшая генерация",
-            detailsURL: "zalupa"
+            detailsURL: "i2i"
         }
     ]
 })
