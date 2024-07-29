@@ -12,5 +12,8 @@
     "angularjs-tooltips": "^1.0.5",
     "cors": "^2.8.5",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.7"
   }
 }
