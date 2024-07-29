@@ -1,0 +1,31 @@
+
+.tip {
+    position: relative;
+    left: -9999px;
+    box-sizing: border-box;
+    opacity: 0;
+    padding: 5px 10px;
+    margin: -5px 0 0 10px;
+    border: 1px solid #333;
+    border-radius: 2px;
+    background: black;
+    transition: all linear .2s;
+    box-shadow: 0 0 5px #999;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -6px;
+      margin-top: -6px;
+      border-style: solid;
+      border-width: 6px 6px 6px 0;
+      border-color: transparent #333;
+      display: block;
+      width: 0;
+      z-index: 1;
+    }
+    &.active {
+      left: auto;
+      opacity: 1;
+    }
+  }

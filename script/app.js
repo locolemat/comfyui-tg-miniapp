@@ -140,3 +140,26 @@ app.controller("generateCtrl", function($scope){
         }
     ]
 })
+
+app.directive('tip', function() {
+    return {
+      restrict: 'A',
+      scope: {
+        tip: '@tip',
+        trigger: '@trigger'
+      },
+      link: function(scope, element, attrs) {
+        var tooltip = '<span class="tip">' + scope.tip + '</span>';
+        element.after(tooltip);
+        if(scope.trigger == 'hover') {
+          element.bind('mouseenter mouseleave', function() {
+            element.next().toggleClass('active');
+          });
+        } else {
+          element.bind('focus blur', function() {
+            element.next().toggleClass('active');
+          });
+        }
+      }
+    }
+  });
