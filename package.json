@@ -11,7 +11,8 @@
   "dependencies": {
     "angularjs-tooltips": "^1.0.5",
     "cors": "^2.8.5",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "flowbite": "^2.4.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.7"
